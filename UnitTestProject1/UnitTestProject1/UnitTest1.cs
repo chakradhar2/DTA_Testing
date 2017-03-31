@@ -7,41 +7,43 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod, Priority(0), Owner("test")]
-        public void TestMethod1()
+        public void PassingTest()
         {
             Assert.IsTrue(true, "It shouldn't fail");
         }
 
-        [TestMethod, Priority(0), Owner("test")]
-        public void TestMethod2()
+        [TestMethod, Priority(2), Owner("test")]
+        public void TestRunParameterTest()
         {
-            Assert.IsTrue(false, "It should fail");
+            Assert.AreEqual("DataSource=tcp:ServerName.database.windows.net,1433;InitialCatalog=DatabaseName", this.TestContext.Properties["connectionString"], "Test run parameter not overridden. Should fail unless overridden");
         }
 
         [TestMethod, Priority(0), Owner("test")]
         [Ignore]
-        public void TestMethod3()
+        public void IgnoredTest()
         {
             Assert.IsTrue(false, "This shouldn't be executed");
         }
 
         [TestMethod, Priority(3), Owner("test")]
-        public void TestMethod4()
+        public void P3Test()
         {
             Assert.IsTrue(true, "Testing with Priority");
         }
 
         [TestMethod, Priority(2), Owner("test"), TestCategory("TestCat")]
-        public void TestMethod5()
+        public void TestCategoryTest()
         {
             Assert.IsTrue(true, "Testing with some category");
         }
 
         [TestMethod]
-        public void TestMethod6()
+        public void FailingTest()
         {
             Assert.IsTrue(true, "Another simple test which throws exception");
             throw new Exception("Some random exception");
         }
+
+        public TestContext TestContext { get; set; }
     }
 }

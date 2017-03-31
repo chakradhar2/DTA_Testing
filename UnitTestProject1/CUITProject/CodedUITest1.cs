@@ -26,13 +26,7 @@ namespace CUITProject
         public void BasicCUITest()
         {
             this.UIMap.RecordedMethod1();
-        }
-
-        [TestMethod]
-        public void TestContextParameterTest()
-        {
-            Assert.AreEqual(this.TestContext.Properties["connectionString"], "Data Source=tcp:ServerName.database.windows.net,1433;Initial Catalog=DatabaseName", "Test context property is not overridden");
-        }
+        }        
 
         #region Additional test attributes
 
