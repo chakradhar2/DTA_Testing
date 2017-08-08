@@ -25,7 +25,8 @@ namespace CUITProject
         [TestMethod]
         public void BasicCUITest()
         {
-            this.UIMap.RecordedMethod1();
+            BrowserWindow browser = BrowserWindow.Launch("https://www.google.com");
+            Playback.Wait(1000);
         }        
 
         #region Additional test attributes
