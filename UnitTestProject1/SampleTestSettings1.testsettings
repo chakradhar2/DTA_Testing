@@ -24,8 +24,8 @@
     </AgentRule>
   </Execution>
   <Properties>
+    <Property name="connectionString" value="sampleString" />
     <Property name="param1" value="Param1Value"/>
     <Property name="param2" value="Param2Value"/>
-    <Property name="param3" value="Param3Value"/>
   </Properties>
 </TestSettings>
