@@ -18,6 +18,18 @@ namespace UnitTestProject1
             Assert.AreEqual("DataSource=tcp:ServerName.database.windows.net,1433;InitialCatalog=DatabaseName", this.TestContext.Properties["connectionString"], "Test run parameter not overridden. Should fail unless overridden");
         }
 
+        [TestMethod]
+        public void TestRunParameterOverrideParam1Value()
+        {
+            Assert.AreEqual("OverrideParam1Value", this.TestContext.Properties["param1"], "Value for param1 doesnt match the expected overriden value : OverrideParam1Value");
+        }
+
+        [TestMethod]
+        public void TestRunParameterNoOverrideParam2Value()
+        {
+            Assert.AreEqual("Param2Value", this.TestContext.Properties["param2"], "Value for param2 doesnt match the expected original value : Param2Value");
+        }
+
         [TestMethod, Priority(0), Owner("test")]
         [Ignore]
         public void IgnoredTest()

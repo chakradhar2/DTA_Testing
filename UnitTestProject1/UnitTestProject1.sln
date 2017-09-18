@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{2E346414-3E91-4B4E-BF85-ED30E94B2EDA}"
 EndProject
@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40686417-3FDE-4AB0-B338-CB1BBA5424A7}"
 	ProjectSection(SolutionItems) = preProject
 		SampleRunsettings.runsettings = SampleRunsettings.runsettings
+		SampleTestSettings1.testsettings = SampleTestSettings1.testsettings
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIAProject", "TIAProject\TIAProject.csproj", "{A1D0023E-B1A9-4356-B962-7B2AA5B45254}"
