@@ -20,3 +20,10 @@ New-Item "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVers
 New-Item "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\vstest.executionengine.x86.exe"
 New-Item "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\vstest.discoveryengine.exe"
 New-Item "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\vstest.discoveryengine.x86.exe"
+
+
+Invoke-WebRequest -Uri 'https://download.sysinternals.com/files/Procdump.zip' -OutFile Procdump.zip
+Expand-Archive "Procdump.zip" -DestinationPath "procdump" -Force
+cd procdump
+start-process powershell -argument "$PWD\procdump.exe -w -s 5 -n 100 vstest.console -acceptula"
+start-process powershell -argument "$PWD\procdump.exe -w -s 5 -n 100 vstest.executionengine -acceptula"
